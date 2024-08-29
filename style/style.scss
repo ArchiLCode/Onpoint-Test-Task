@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "DIN Pro";
+  src: url(/fonts/dinpro.otf);
+}
+
+@import "/fonts/gilroy.css";
+
 .container {
   width: 1024px;
   height: 768px;
@@ -16,13 +23,11 @@
 }
 
 .label-bar {
-  margin-top: 25px;
-  margin-left: 61px;
+  top: 25px;
+  left: 66px;
   width: 153px;
   display: flex;
   position: absolute;
-  top: 0;
-  left: 0;
   align-items: center;
   justify-content: space-between;
   z-index: 10;
@@ -46,23 +51,166 @@
   color: rgb(39, 39, 39);
   text-transform: uppercase;
   transform: translateY(3px);
+  letter-spacing: 1.5px;
 }
 
 .logo {
   position: absolute;
   left: 61px;
-  bottom: 25px;
+  bottom: 13px;
   width: 57px;
   height: 12px;
   z-index: 1000;
 }
 
 .main-slider {
+  width: 3072px;
+  height: 768px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+.main-slide {
   width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
+
 .main-slide1 {
+  left: 0;
 }
+
+.hello-text {
+  font-size: 27px;
+  font-family: "DIN Pro";
+  color: rgb(36, 36, 36);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-left: 66px;
+  margin-top: 160px;
+}
+
+.not-commer {
+  font-size: 109px;
+  font-family: "Gilroy";
+  color: rgb(23, 23, 23);
+  text-transform: uppercase;
+  text-align: left;
+  text-wrap: wrap;
+  margin-left: 66px;
+  margin-top: 25px;
+  font-weight: 300;
+  width: 910px;
+  line-height: 105%;
+  letter-spacing: 5px;
+}
+
 .main-slide2 {
+  left: 1024px;
 }
 .main-slide3 {
+  left: 2048px;
+}
+
+.pink-sperm1 {
+  position: absolute;
+  left: 430px;
+  top: 156px;
+  width: 590px;
+  z-index: 11;
+}
+.pink-sperm2 {
+  position: absolute;
+  left: -100px;
+  top: 650px;
+  width: 360px;
+  height: 70px;
+  z-index: 3;
+  rotate: -20deg;
+  transform: scale(-1, 1);
+  filter: blur(4px);
+}
+.blue-virus1 {
+  position: absolute;
+  left: 840px;
+  top: 200px;
+  width: 115px;
+}
+.blue-virus2 {
+  position: absolute;
+  left: 540px;
+  bottom: 0px;
+  width: 225px;
+}
+.bact {
+  position: absolute;
+  left: 0px;
+  top: 72px;
+  width: 120px;
+}
+.blue_sphere1 {
+  position: absolute;
+  left: 23px;
+  top: 503px;
+  width: 71px;
+  height: 71px;
+  rotate: 200deg;
+  z-index: -1;
+}
+.blue_sphere2 {
+  position: absolute;
+  left: 744px;
+  top: 61px;
+  width: 62px;
+}
+.blue_sphere3 {
+  position: absolute;
+  left: 360px;
+  top: 640px;
+  width: 54px;
+  filter: blur(12px);
+}
+.blue_sphere4 {
+  position: absolute;
+  left: 930px;
+  top: 40px;
+  width: 36px;
+  filter: blur(12px);
+}
+
+.next {
+  background-color: rgb(255, 106, 159);
+  position: absolute;
+  border-radius: 40px;
+  left: 620px;
+  top: 460px;
+  width: 280px;
+  height: 80px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+
+  .arrow {
+    border-radius: 50%;
+    background-color: rgb(23, 23, 23);
+    box-shadow: 0px 0px 1px 1px #a4a4a4;
+    width: 50px;
+    margin-left: 20px;
+    aspect-ratio: 1;
+    img {
+      margin: 19px 15px;
+      width: 20px;
+    }
+  }
+  p {
+    margin-left: 20px;
+    font-size: 27px;
+    font-family: "DIN Pro";
+    color: rgb(23, 23, 23);
+    text-align: left;
+  }
 }
