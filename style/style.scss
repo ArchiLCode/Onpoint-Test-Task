@@ -1,0 +1,68 @@
+.container {
+  width: 1024px;
+  height: 768px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+#bg {
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+
+.label-bar {
+  margin-top: 25px;
+  margin-left: 61px;
+  width: 153px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.home {
+  width: 24px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.line {
+  width: 1.5px;
+  height: 25px;
+  background-color: rgb(39, 39, 39);
+}
+
+.project-label {
+  font-size: 17px;
+  font-family: "Circe";
+  color: rgb(39, 39, 39);
+  text-transform: uppercase;
+  transform: translateY(3px);
+}
+
+.logo {
+  position: absolute;
+  left: 61px;
+  bottom: 25px;
+  width: 57px;
+  height: 12px;
+  z-index: 1000;
+}
+
+.main-slider {
+  width: 100%;
+}
+.main-slide1 {
+}
+.main-slide2 {
+}
+.main-slide3 {
+}
