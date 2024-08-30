@@ -81,6 +81,7 @@ nextBtn.addEventListener("click", () => {
 //Show popup
 moreBtn.addEventListener("click", () => {
   if (!popupOpened) {
+    popup.style.zIndex = 30;
     popup.style.visibility = "visible";
     popup.style.opacity = 1;
     popupOpened = true;
@@ -92,6 +93,7 @@ cross.addEventListener("click", () => {
   popup.style.visibility = "hidden";
   popup.style.opacity = 0;
   popupOpened = false;
+  popup.style.zIndex = -30;
 });
 
 //Pagination buttons
