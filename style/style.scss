@@ -249,6 +249,8 @@
   text-align: left;
   overflow-y: scroll;
   direction: rtl;
+  position: relative;
+  z-index: 10;
 }
 
 .text-body::-webkit-scrollbar {
@@ -269,7 +271,6 @@
   font-family: "DIN Pro";
   color: rgb(36, 36, 36);
   text-transform: uppercase;
-  line-height: 1.2;
   text-align: left;
   margin-left: 350px;
   margin-top: 175px;
@@ -283,7 +284,7 @@
   text-align: left;
   letter-spacing: 10px;
   margin-left: 350px;
-  margin-top: 31px;
+  margin-top: 20px;
   transform: translateX(-4px);
 }
 
@@ -314,6 +315,13 @@
   padding: 52px 50px 0px 130px;
   color: rgb(46, 46, 46);
   line-height: 1.2;
+  position: relative;
+
+  .icon1 {
+    position: absolute;
+    width: 64px;
+    top: -33px;
+  }
 }
 
 .arcu {
@@ -326,10 +334,18 @@
   color: rgb(46, 46, 46);
   line-height: 1.2;
   padding: 52px 80px 0 43px;
+
+  .icon2 {
+    position: absolute;
+    width: 70px;
+    top: -25px;
+  }
 }
 
 .more {
   background-color: rgb(255, 106, 159);
+  position: relative;
+  z-index: 10;
   margin-top: 36px;
   width: 263px;
   border-radius: 40px;
@@ -358,4 +374,142 @@
     margin: 18.5px;
     width: 13px;
   }
+}
+
+.popup {
+  position: absolute;
+  inset: 0 0;
+  width: 1024px;
+  height: 768px;
+  background-color: rgba(22, 39, 62, 0.702);
+  z-index: 30;
+  visibility: hidden;
+  transition: linear 0.3s;
+  opacity: 0;
+}
+.popup-window {
+  border-radius: 40px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 140px;
+  top: 123px;
+  width: 610px;
+  height: 573px;
+  z-index: 31;
+  padding-left: 212px;
+}
+.cross {
+  position: absolute;
+  width: 34px;
+  aspect-ratio: 1;
+  top: 33px;
+  right: 33px;
+  cursor: pointer;
+}
+.texts {
+  position: relative;
+  margin: 25px 0;
+
+  .num {
+    font-size: 25px;
+    font-family: "Gilroy";
+    color: rgb(140, 201, 232);
+    font-weight: bold;
+    margin: 15px 0;
+  }
+
+  p {
+    font-size: 25px;
+    font-family: "DIN Pro";
+    color: rgb(46, 46, 46);
+    line-height: 1.2;
+  }
+
+  .text1 {
+    position: absolute;
+    inset: 0 0;
+    transition: linear 0.2s;
+  }
+  .text2 {
+    position: absolute;
+    inset: 0 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: linear 0.2s;
+  }
+}
+.btns {
+  position: absolute;
+  bottom: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-prev {
+  width: 9px;
+  cursor: pointer;
+}
+.btn-next {
+  width: 9px;
+  rotate: 180deg;
+  cursor: pointer;
+}
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.circle1 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(255, 106, 159);
+  transition: linear 0.2s;
+}
+.circle2 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  outline: 2px solid rgb(23, 23, 23);
+  outline-offset: -2px;
+  transition: linear 0.2s;
+}
+
+.key-msg1 {
+  font-size: 27px;
+  font-family: "DIN Pro";
+  color: rgb(36, 36, 36);
+  text-transform: uppercase;
+  text-align: left;
+  margin-top: 50px;
+}
+
+.brend1 {
+  font-size: 85px;
+  font-family: "Gilroy";
+  color: rgb(36, 36, 36);
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 10px;
+  margin-top: 22px;
+  transform: translateX(-6px);
+}
+
+.sperm1 {
+  position: absolute;
+  left: 365px;
+  top: 300px;
+  width: 1141px;
+  rotate: 30deg;
+}
+.sperm2 {
+}
+.sperm3 {
+}
+.sperm4 {
+}
+.sperm5 {
 }
