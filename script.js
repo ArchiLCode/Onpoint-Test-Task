@@ -76,6 +76,9 @@ homeBtn.addEventListener("click", () => {
 nextBtn.addEventListener("click", () => {
   bg.style.left = -1024 + "px";
   mainSlider.style.left = -1024 + "px";
+  spermArr.forEach((el) => {
+    el.classList.add("active");
+  });
 });
 
 //Show popup
