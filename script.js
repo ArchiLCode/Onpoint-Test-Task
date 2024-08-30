@@ -14,6 +14,7 @@ const cross = document.querySelector(".cross");
 var start = null;
 var end = null;
 var popupOpened = false;
+var touches = [];
 
 window.addEventListener("mousedown", (event) => {
   event.preventDefault();
@@ -74,17 +75,32 @@ prevPug.addEventListener("click", () => {
   circlePug2.classList.add("circle2");
   circlePug2.classList.remove("circle1");
 });
-// window.addEventListener("touchstart", (event) => {
-//   start = event.touches[0].clientX;
-//   end = null;
-// });
-// window.addEventListener("touchend", (event) => {
-//   //end = event.touches[0];
-//   console.log(event.touches);
 
-//   start < end ? rightSwipe() : leftSwipe();
-//   start = null;
-// });
+window.addEventListener("touchstart", (event) => {
+  start = event.touches[0].clientX;
+  end = null;
+  touches = [];
+});
+
+window.addEventListener("touchmove", (event) => {
+  touches.push(event.touches[event.touches.length - 1]);
+});
+
+window.addEventListener("touchend", (event) => {
+  end = touches[touches.length - 1].clientX;
+
+  if (end - start >= 20) {
+    rightSwipe();
+  } else if (
+    start !== null &&
+    end !== null &&
+    start != end &&
+    start - end >= 20
+  ) {
+    leftSwipe();
+  }
+  start = null;
+});
 
 const rightSwipe = () => {
   if (bg.style.left.slice(0, -2) < 0) {
