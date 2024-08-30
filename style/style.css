@@ -152,6 +152,8 @@
   left: 840px;
   top: 200px;
   width: 115px;
+  -webkit-animation: bact1 7s linear infinite alternate;
+          animation: bact1 7s linear infinite alternate;
 }
 
 .blue-virus2 {
@@ -159,6 +161,8 @@
   left: 540px;
   bottom: 0px;
   width: 225px;
+  -webkit-animation: bact2 5s linear infinite alternate;
+          animation: bact2 5s linear infinite alternate;
 }
 
 .bact {
@@ -176,6 +180,8 @@
   height: 71px;
   rotate: 200deg;
   z-index: -1;
+  -webkit-animation: bact3 8s linear infinite alternate;
+          animation: bact3 8s linear infinite alternate;
 }
 
 .blue-sphere2 {
@@ -183,6 +189,8 @@
   left: 744px;
   top: 61px;
   width: 62px;
+  -webkit-animation: bact4 4s linear infinite alternate;
+          animation: bact4 4s linear infinite alternate;
 }
 
 .blue-sphere3 {
@@ -192,6 +200,8 @@
   width: 54px;
   -webkit-filter: blur(12px);
           filter: blur(12px);
+  -webkit-animation: bact5 3s linear infinite alternate;
+          animation: bact5 3s linear infinite alternate;
 }
 
 .blue-sphere4 {
@@ -201,8 +211,87 @@
   width: 36px;
   -webkit-filter: blur(12px);
           filter: blur(12px);
+  -webkit-animation: bact6 2s linear infinite alternate;
+          animation: bact6 2s linear infinite alternate;
 }
 
+@-webkit-keyframes bact1 {
+  to {
+    -webkit-transform: translate(-40px, -20px);
+            transform: translate(-40px, -20px);
+    rotate: 30deg;
+  }
+}
+
+@keyframes bact1 {
+  to {
+    -webkit-transform: translate(-40px, -20px);
+            transform: translate(-40px, -20px);
+    rotate: 30deg;
+  }
+}
+@-webkit-keyframes bact2 {
+  to {
+    -webkit-transform: translate(-20px, 20px);
+            transform: translate(-20px, 20px);
+    scale: 1.2;
+  }
+}
+@keyframes bact2 {
+  to {
+    -webkit-transform: translate(-20px, 20px);
+            transform: translate(-20px, 20px);
+    scale: 1.2;
+  }
+}
+@-webkit-keyframes bact3 {
+  to {
+    -webkit-transform: translate(-90px, -40px);
+            transform: translate(-90px, -40px);
+  }
+}
+@keyframes bact3 {
+  to {
+    -webkit-transform: translate(-90px, -40px);
+            transform: translate(-90px, -40px);
+  }
+}
+@-webkit-keyframes bact4 {
+  to {
+    -webkit-transform: translate(20px, 10px);
+            transform: translate(20px, 10px);
+    scale: 0.9;
+  }
+}
+@keyframes bact4 {
+  to {
+    -webkit-transform: translate(20px, 10px);
+            transform: translate(20px, 10px);
+    scale: 0.9;
+  }
+}
+@-webkit-keyframes bact5 {
+  to {
+    scale: 1.1;
+  }
+}
+@keyframes bact5 {
+  to {
+    scale: 1.1;
+  }
+}
+@-webkit-keyframes bact6 {
+  to {
+    -webkit-transform: translate(20px, 20px);
+            transform: translate(20px, 20px);
+  }
+}
+@keyframes bact6 {
+  to {
+    -webkit-transform: translate(20px, 20px);
+            transform: translate(20px, 20px);
+  }
+}
 .next {
   background-color: rgb(255, 106, 159);
   position: absolute;
@@ -267,8 +356,8 @@
   -webkit-box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
           box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
   position: absolute;
-  padding: 30px;
-  padding-bottom: 0px;
+  padding: 10px;
+  border: 20px solid #fff;
   left: 118px;
   top: 240px;
   width: 715px;
@@ -479,16 +568,16 @@
 .texts .text1 {
   position: absolute;
   inset: 0 0;
-  -webkit-transition: linear 0.2s;
-  transition: linear 0.2s;
+  -webkit-transition: linear 0.4s;
+  transition: linear 0.4s;
 }
 .texts .text2 {
   position: absolute;
   inset: 0 0;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: linear 0.2s;
-  transition: linear 0.2s;
+  -webkit-transition: linear 0.4s;
+  transition: linear 0.4s;
 }
 
 .btns {

@@ -139,12 +139,14 @@
   left: 840px;
   top: 200px;
   width: 115px;
+  animation: bact1 7s linear infinite alternate;
 }
 .blue-virus2 {
   position: absolute;
   left: 540px;
   bottom: 0px;
   width: 225px;
+  animation: bact2 5s linear infinite alternate;
 }
 .bact {
   position: absolute;
@@ -160,12 +162,14 @@
   height: 71px;
   rotate: 200deg;
   z-index: -1;
+  animation: bact3 8s linear infinite alternate;
 }
 .blue-sphere2 {
   position: absolute;
   left: 744px;
   top: 61px;
   width: 62px;
+  animation: bact4 4s linear infinite alternate;
 }
 .blue-sphere3 {
   position: absolute;
@@ -173,6 +177,7 @@
   top: 640px;
   width: 54px;
   filter: blur(12px);
+  animation: bact5 3s linear infinite alternate;
 }
 .blue-sphere4 {
   position: absolute;
@@ -180,6 +185,41 @@
   top: 40px;
   width: 36px;
   filter: blur(12px);
+  animation: bact6 2s linear infinite alternate;
+}
+
+@keyframes bact1 {
+  to {
+    transform: translate(-40px, -20px);
+    rotate: 30deg;
+  }
+}
+@keyframes bact2 {
+  to {
+    transform: translate(-20px, 20px);
+    scale: 1.2;
+  }
+}
+@keyframes bact3 {
+  to {
+    transform: translate(-90px, -40px);
+  }
+}
+@keyframes bact4 {
+  to {
+    transform: translate(20px, 10px);
+    scale: 0.9;
+  }
+}
+@keyframes bact5 {
+  to {
+    scale: 1.1;
+  }
+}
+@keyframes bact6 {
+  to {
+    transform: translate(20px, 20px);
+  }
 }
 
 .next {
@@ -236,9 +276,8 @@
   background-color: rgb(255, 255, 255);
   box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
   position: absolute;
-  padding: 30px;
-  padding-bottom: 0px;
-  //border-bottom: 30px solid #fff;
+  padding: 10px;
+  border: 20px solid #fff;
   left: 118px;
   top: 240px;
   width: 715px;
@@ -429,14 +468,14 @@
   .text1 {
     position: absolute;
     inset: 0 0;
-    transition: linear 0.2s;
+    transition: linear 0.4s;
   }
   .text2 {
     position: absolute;
     inset: 0 0;
     visibility: hidden;
     opacity: 0;
-    transition: linear 0.2s;
+    transition: linear 0.4s;
   }
 }
 .btns {
