@@ -157,35 +157,47 @@ const leftSwipe = () => {
 
 //Custom scroll
 let drag = false;
-scrollThumb.addEventListener("mousedown", () => {
+let dragOffset = 0;
+scrollThumb.addEventListener("mousedown", (event) => {
   drag = true;
+  dragOffset = event.clientY - scrollThumb.style.top.slice(0, -2) - 240;
 });
 scrollThumb.addEventListener("mousemove", (event) => {
-  if (event.clientY >= 240 && event.clientY <= 586 && drag) {
-    scrollThumb.style.top = event.clientY - 240 + "px";
-    scrollableText.style.transform = `translateY(${240 - event.clientY}px)`;
+  if (
+    event.clientY - dragOffset >= 240 &&
+    event.clientY - dragOffset <= 586 &&
+    drag
+  ) {
+    scrollThumb.style.top = event.clientY - 240 - dragOffset + "px";
+    scrollableText.style.transform = `translateY(${
+      240 - event.clientY + dragOffset
+    }px)`;
   }
 });
 scrollThumb.addEventListener("mouseup", () => {
   drag = false;
+  dragOffset = 0;
 });
 
-scrollThumb.addEventListener("touchstart", () => {
+scrollThumb.addEventListener("touchstart", (event) => {
   drag = true;
+  dragOffset =
+    event.touches[0].clientY - scrollThumb.style.top.slice(0, -2) - 240;
 });
 scrollThumb.addEventListener("touchmove", (event) => {
   if (
-    event.touches[event.touches.length - 1].clientY >= 240 &&
-    event.touches[event.touches.length - 1].clientY <= 586 &&
+    event.touches[event.touches.length - 1].clientY - dragOffset >= 240 &&
+    event.touches[event.touches.length - 1].clientY - dragOffset <= 586 &&
     drag
   ) {
     scrollThumb.style.top =
-      event.touches[event.touches.length - 1].clientY - 240 + "px";
+      event.touches[event.touches.length - 1].clientY - 240 - dragOffset + "px";
     scrollableText.style.transform = `translateY(${
-      240 - event.touches[event.touches.length - 1].clientY
+      240 - event.touches[event.touches.length - 1].clientY + dragOffset
     }px)`;
   }
 });
 scrollThumb.addEventListener("touchend", () => {
   drag = false;
+  dragOffset = 0;
 });

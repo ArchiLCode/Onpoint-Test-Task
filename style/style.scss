@@ -300,9 +300,13 @@
   color: rgb(23, 23, 23);
   line-height: 1.5;
   text-align: left;
-  overflow-y: hidden;
+  overflow-y: scroll;
   position: relative;
   z-index: 10;
+}
+
+.text-body::-webkit-scrollbar {
+  display: none;
 }
 
 .key-msg {
@@ -709,6 +713,8 @@
   position: absolute;
   width: 20px;
   height: 104px;
+  top: 0px;
+  cursor: pointer;
 }
 .scroll-track {
   margin: 0 auto;
